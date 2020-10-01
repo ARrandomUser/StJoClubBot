@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
 		helpBool = true
 		args = ['help','changelog',
 			'html','css','js','python','c','cpp','h','yaml','json','asciidoc','autohotkey','bash','coffeescript','cs','diff','fix','glsl','ini','md','ml','tex','xl','xml',
-			'stop','update','vote','draw','math','clear']
+			'stop','update','vote','draw','math','clear','suggest','info','reload','ping']
 	}
 
 	if (helpBool === false) {
