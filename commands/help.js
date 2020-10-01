@@ -162,7 +162,7 @@ exports.run = (client, message, args) => {
 		}
 
 		if (args[x] === 'clear') {
-			helpMsgContent += '```js\n!clear <number> // Supprime un certain nombre de messages\n// Note: Cette commande est restrainte aux membres suivants: Sam1222#8797 - Rosario#5188 - "Archi"#2955```'
+			helpMsgContent += '```js\n!clear <number> // Supprime un certain nombre de messages\n// Note: Cette commande est restrainte aux membres suivants: Sam1222#8797```'
 		}
 
 		if (args[x] === 'ping') {
