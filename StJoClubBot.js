@@ -3,12 +3,15 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
+const config = require("./data/config.json");
+client.config = config;
+
 client.on('message', async message => {
-	let args = message.content.slice('!').trim().split(' ')
+	let args = message.content.slice(config.prefix.length).trim().split(' ')
 	let cmd = args.shift().toLowerCase()
 
 	if (message.author.bot) {return}
-	if (!message.content.startsWith('!')) {return}
+	if (!message.content.startsWith(config.prefix)) {return}
 
 	try {
 		delete require.cache[require.resolve(`./commands/${cmd}.js`)]
