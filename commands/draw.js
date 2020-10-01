@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
 					return
 				})
 		}
-		message.reply('\n' + rendered, {
+		message.channel.send(rendered, {
 			code: 'md'
 		})
 	})
