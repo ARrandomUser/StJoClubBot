@@ -3,15 +3,12 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-const config = require("./data/config.json");
-client.config = config;
-
 client.on('message', async message => {
-	let args = message.content.slice(config.prefix.length).trim().split(' ')
+	let args = message.content.slice('!').trim().split(' ')
 	let cmd = args.shift().toLowerCase()
 
 	if (message.author.bot) {return}
-	if (!message.content.startsWith(config.prefix)) {return}
+	if (!message.content.startsWith('!')) {return}
 
 	try {
 		delete require.cache[require.resolve(`./commands/${cmd}.js`)]
@@ -34,6 +31,6 @@ client.on('ready', function() {
 	client.user.setAvatar('./textures/bot.png')
 })
 
-client.login(config.token)
+client.login(process.env.TOKEN)
 
 
