@@ -1,1 +1,1 @@
-worker: node: StJoClubBot.js
+worker: node StJoClubBot.js
