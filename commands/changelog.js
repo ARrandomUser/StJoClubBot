@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 
 	if (args.length === 0) {
 		changelogBool = true
-		args = ['2020-10-01']
+		args = ['2020-09-30','2020-10-01']
 	}
 
 	if (changelogBool === false) {
@@ -29,8 +29,12 @@ exports.run = (client, message, args) => {
 			changelogMsgContent = ''
 		}
 
+		if (args[x] === '2020-09-30') {
+			changelogMsgContent += '```python\n# v1.0.0 2020-09-30\n- Finalisation du Bot (Faites !help pour afficher la liste des commandes disponibles)\n```'
+		}
+
 		if (args[x] === '2020-10-01') {
-			changelogMsgContent += '```python\n# v1.0.0 2020-05-12\n- Finalisation du Bot (Faites !help pour afficher la liste des commandes disponibles)\n```'
+			changelogMsgContent += '```python\n# v1.0.1 2020-10-01\n- Corrections de bugs:\n - !changelog affiche désormais la bonne date\n - !help affiche désormais les commandes suggest, reload et ping\nAjout de commandes:\n - !sourcecode\n```'
 		}
 	}
 
