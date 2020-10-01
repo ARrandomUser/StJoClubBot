@@ -1,0 +1,29 @@
+{
+  "name": "stjoclubbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "StJoClubBot.js",
+  "dependencies": {
+    "ascii-art": "^2.5.0",
+    "discord-emoji-convert": "^1.6.0",
+    "discord.js": "^12.0.2",
+    "http": "^0.0.1-security",
+    "i": "^0.3.6",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.0",
+    "node-pre-gyp": "^0.14.0",
+    "node-ecole-directe": "^1.0.1",
+    "npm": "^6.14.4",
+    "mathjs": "^6.6.4",
+    "path": "^0.12.7",
+    "quick.db": "^7.1.1",
+    "quick.log": "^1.2.1",
+    "sqlite": "^4.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam1222",
+  "license": "ISC"
+}
