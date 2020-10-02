@@ -12,6 +12,13 @@ client.on('message', async message => {
 
 	if (message.author.bot) {return}
 	if (!message.content.startsWith(config.prefix)) {return}
+	
+	let blacklistedPersons = ["4030"]
+	
+	if (blacklistedPersons.includes(message.author.discriminator) === true) {
+		message.delete()
+		return message.author.send("Programme le toi même!")
+	}
 
 	try {
 		delete require.cache[require.resolve(`./commands/${cmd}.js`)]
