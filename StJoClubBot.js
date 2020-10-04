@@ -30,6 +30,18 @@ client.on('message', async message => {
 	}
 })
 
+client.on("messageDelete", (messageDelete) => {
+	let deleteEmbed = new Discord.RichEmbed()
+		.setTitle("**MESSAGE SUPPRIMÉ**")
+		.setColor("#fc3c3c")
+		.addField("Auteur", messageDelete.author.tag, true)
+		.addField("Channel", messageDelete.channel, true)
+		.addField("Message", messageDelete.content)
+		.setFooter(`Message ID: ${messageDelete.id} | Author ID: ${messageDelete.author.id}`)
+
+	messageDelete.channel.send(deleteEmbed)
+}
+
 client.on('ready', function() {
 	console.log(`\x1b[33m%s\x1b[0m`,'[WARN]','\x1b[0m','Connexion en cours...')
 	console.log(`\x1b[32m%s\x1b[0m`,'[OK]','\x1b[0m', 'Connexion à l\'API Discord.js effectuée')
