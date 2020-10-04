@@ -36,7 +36,7 @@ client.on("messageDelete", (messageDelete) => {
 		.setColor("#fc3c3c")
 		.addField("Auteur", messageDelete.author.tag, true)
 		.addField("Channel", messageDelete.channel, true)
-		.addField("Message", messageDelete.content)
+		//.addField("Message", messageDelete.content)
 		.setFooter(`Message ID: ${messageDelete.id} | Author ID: ${messageDelete.author.id}`)
 
 	messageDelete.channel.send(deleteEmbed)
