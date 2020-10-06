@@ -15,7 +15,7 @@ client.on('message', async message => {
 	
 	let blacklistedPersons = ["4030"]
 	
-	if (blacklistedPersons.includes(message.author.discriminator) === true) { // On Blacklist Narek évidemment
+	if (blacklistedPersons.includes(message.author.discriminator) === true) { // On Blacklist Narek évidemment test
 		message.delete()
 		return message.author.send("Programme le toi même!")
 	}
